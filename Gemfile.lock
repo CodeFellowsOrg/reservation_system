@@ -179,7 +179,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
   dynamic_form (= 1.1.4)
-  factory_girl
+  factory_girl (~> 2.6.0)
   jquery-rails
   launchy
   pry-debugger

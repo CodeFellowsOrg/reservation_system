@@ -1,0 +1,6 @@
+<%= @reservation.customer.name %>
+<%= @reservation.restaurant.name %>
+<%= @reservation.time %>
+<%= link_to "Edit", edit_reservation_path(@reservation) %>
+<%= link_to "Delete", reservation_path(@reservation), method: "delete", confirm: "Are you sure?" %>
+

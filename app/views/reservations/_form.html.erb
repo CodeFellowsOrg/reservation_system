@@ -1,0 +1,15 @@
+<%= form_for @reservation, html: { class: "custom" } do |f| %>
+  <p>
+    <%= f.label :time, "Time" %><br>
+    <%= f.datetime_select :time %>
+  </p>
+  <p>
+    <%= f.label :customer, "Customer" %><br>
+    <%= f.collection_select :customer_id, @customers, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :restaurant, "Restaurant" %><br>
+    <%= f.collection_select :restaurant_id, @restaurants, :id, :name %>
+  </p>
+  <%= f.submit nil, class: "button" %>
+<% end %>

@@ -1,9 +1,9 @@
 ReservationSystem::Application.routes.draw do
-
- root to: "home#index"
+ root to: "reservations#index"
 
  resources :customers
  resources :restaurants
+ resources :reservations
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

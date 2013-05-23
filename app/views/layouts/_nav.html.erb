@@ -1,0 +1,27 @@
+<div class="contain-to-grid">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Reservations", root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-dropdown"><%= link_to "Customers", customers_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Add Customer", new_customer_path %></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="has-dropdown"><%= link_to "Restaurants", restaurants_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Add Restaurant", new_restaurant_path %></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    </section>
+  </nav>
+</div>
