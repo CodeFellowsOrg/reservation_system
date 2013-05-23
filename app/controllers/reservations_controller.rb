@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(params[:reservation])
     if @reservation.save
       flash[:notice] = "You have created a new reservation."
-      redirect_to @reservation
+      redirect_to reservations_path
     else
       flash[:alert] = "You have not created a new reservation."
       render action: "new"
@@ -32,7 +32,7 @@ class ReservationsController < ApplicationController
   def update
     if @reservation.update_attributes(params[:reservation])
       flash[:notice] = "You have updated your reservation."
-      redirect_to @reservation
+      redirect_to reservations_path
     else
       flash[:alert] = "You have not updated your reservation."
       render action: "edit"
@@ -40,6 +40,7 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @reservation.destroy
     flash[:notice] = "Your reservation has been deleted."
     redirect_to root_path
   end

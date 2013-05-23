@@ -16,7 +16,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(params[:restaurant])
     if @restaurant.save
       flash[:notice] = "You have created a new restaurant."
-      redirect_to @restaurant
+      redirect_to restaurants_path
     else
       flash[:alert] = "You have not created a new restaurant."
       render action: "new"
@@ -29,7 +29,7 @@ class RestaurantsController < ApplicationController
   def update
     if @restaurant.update_attributes(params[:restaurant])
       flash[:notice] = "You have updated the restaurant."
-      redirect_to @restaurant
+      redirect_to restaurants_path
     else
       flash[:alert] = "You have not updated the restaurant."
       render action: "edit"

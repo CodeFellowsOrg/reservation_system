@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(params[:customer])
     if @customer.save
       flash[:notice] = "You have created a new customer."
-      redirect_to @customer
+      redirect_to customers_path
     else
       flash[:alert] = "You have not created a new customer."
       render action: "new"
@@ -30,7 +30,7 @@ class CustomersController < ApplicationController
   def update
     if @customer.update_attributes(params[:customer])
       flash[:notice] = "You have updated the customer."
-      redirect_to @customer
+      redirect_to customers_path
     else
       flash[:alert] = "You have not updated the customer."
       render action: "edit"
