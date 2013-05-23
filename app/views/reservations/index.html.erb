@@ -1,13 +1,13 @@
 <% @reservations.each do |reservation| %>
 <div class="row panel">
-  <div class="large-8 columns">
+  <div class="small-8 columns">
     <b><%= reservation.customer.name %></b> has a reservation at <b><%= reservation.restaurant.name %></b><br>
     <%= reservation.time.strftime("%a %B, %e at %l:%M %p") %>
   </div>
-  <div class="large-2 columns">
+  <div class="small-2 columns">
     <%= link_to "Edit", edit_reservation_path(reservation), class: "button small round" %>
   </div>
-  <div class="large-2 columns">
+  <div class="small-2 columns">
     <%= link_to "Delete", reservation_path(reservation), method: "delete", confirm: "Are your sure?", class: "button small round alert" %>
   </div>
 </div>

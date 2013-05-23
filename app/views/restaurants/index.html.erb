@@ -1,12 +1,12 @@
 <% @restaurants.each do |restaurant| %>
   <div class="row panel">
-    <div class="large-5 columns">
+    <div class="small-5 columns">
       <b><%= restaurant.name %></b>
     </div>
-    <div class="large-2 large-offset-2 columns">
+    <div class="small-2 small-offset-2 columns">
       <%= link_to "Edit", edit_restaurant_path(restaurant), class: "button small round" %>
     </div>
-    <div class="large-3 columns">
+    <div class="small-3 columns">
       <%= link_to "Delete", restaurant_path(restaurant), method: "delete", confirm: "Are your sure?", class: "button small round alert" %>
     </div>
   </div>
